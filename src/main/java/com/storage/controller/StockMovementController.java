@@ -37,8 +37,10 @@ public class StockMovementController {
     StockMovementMapper stockMovementMapper;
 
     @GET
+    @Transactional
     public Response getProduct(@QueryParam("productId") Long productId){
         List<StockMovement> stockMovementList = stockMovementService.getStockMovementForId(productId);
+
         List<StockMovementDto> stockMovementDtos = stockMovementMapper.stockMovementListToStockMovementDtoList(stockMovementList);
         return Response.ok(stockMovementDtos).build();
     }

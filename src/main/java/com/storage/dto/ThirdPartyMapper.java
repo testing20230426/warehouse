@@ -9,15 +9,15 @@ import java.util.List;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE, componentModel = "cdi")
 public interface ThirdPartyMapper {
 
-    @Mapping(source = "partnerName", target = "thirdPartyName")
+    @Mapping(source = "partnerName", target = "thirdParty")
+    @Mapping(source = "cityName", target = "city")
     ThirdParty thirdPartyDtoToThirdParty(ThirdPartyDto thirdPartyDto);
 
 
-    @InheritInverseConfiguration(name = "thirdPartyDtoToThirdParty")
+    @Mapping(source = "thirdParty", target = "partnerName")
+    @Mapping(source = "city", target = "cityName")
     ThirdPartyDto thirdPartyToThirdPartyDto(ThirdParty thirdParty);
 
     @InheritConfiguration
-    ThirdParty updateThirdPartyFromThirdPartyDto(ThirdPartyDto thirdPartyDto, @MappingTarget ThirdParty thirdParty);
-
     List<ThirdPartyDto> thirdPartyListToThirdPartyDtoList(List<ThirdParty> thirdParty);
 }

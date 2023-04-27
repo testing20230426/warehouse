@@ -13,12 +13,11 @@ public class ThirdParty  implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private String thirdPartyName;
+    private String thirdParty;
     private String city;
 
     @OneToMany(mappedBy = "thirdParty")
     private List<StockMovement> stockMovementsList;
-
 
     public Long getId() {
         return id;
@@ -28,12 +27,12 @@ public class ThirdParty  implements Serializable {
         this.id = id;
     }
 
-    public String getThirdPartyName() {
-        return thirdPartyName;
+    public String getThirdParty() {
+        return thirdParty;
     }
 
-    public void setThirdPartyName(String thirdPartyName) {
-        this.thirdPartyName = thirdPartyName;
+    public void setThirdParty(String thirdParty) {
+        this.thirdParty = thirdParty;
     }
 
     public String getCity() {

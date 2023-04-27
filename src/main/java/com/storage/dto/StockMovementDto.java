@@ -1,5 +1,8 @@
 package com.storage.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -10,7 +13,8 @@ public class StockMovementDto implements Serializable {
     private Long id;
     private LocalDate stockOperationDate;
     private BigDecimal stockUnits;
-    private String stockOperation;
+    private Integer stockOperation;
+    @JsonProperty("thirdParty")
     private ThirdPartyDto thirdPartyDto;
 
     private Long productTypeId;
@@ -47,19 +51,19 @@ public class StockMovementDto implements Serializable {
         this.stockUnits = stockUnits;
     }
 
-    public String getStockOperation() {
-        return stockOperation;
-    }
-
-    public void setStockOperation(String stockOperation) {
-        this.stockOperation = stockOperation;
-    }
-
     public ThirdPartyDto getThirdPartyDto() {
         return thirdPartyDto;
     }
 
     public void setThirdPartyDto(ThirdPartyDto thirdPartyDto) {
         this.thirdPartyDto = thirdPartyDto;
+    }
+
+    public Integer getStockOperation() {
+        return stockOperation;
+    }
+
+    public void setStockOperation(Integer stockOperationDto) {
+        this.stockOperation = stockOperationDto;
     }
 }

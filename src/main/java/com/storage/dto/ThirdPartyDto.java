@@ -7,7 +7,7 @@ public class ThirdPartyDto implements Serializable {
 
     private Long id;
     private String partnerName;
-    private String city;
+    private String cityName;
 
 
     public Long getId() {
@@ -26,11 +26,11 @@ public class ThirdPartyDto implements Serializable {
         this.partnerName = partnerName;
     }
 
-    public String getCity() {
-        return city;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 }

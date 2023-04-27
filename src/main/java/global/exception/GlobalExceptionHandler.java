@@ -12,6 +12,6 @@ public class GlobalExceptionHandler implements ExceptionMapper<Throwable> {
     public Response toResponse(Throwable throwable){
         String errorId = UUID.randomUUID().toString();
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
-                .entity(new ErrorResponse(throwable.getMessage(), errorId)).build();
+                .entity(new ErrorResponse(throwable.toString(), errorId)).build();
     }
 }
