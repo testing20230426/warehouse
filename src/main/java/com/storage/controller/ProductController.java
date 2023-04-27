@@ -40,7 +40,7 @@ public class ProductController {
 
     @GET
     @Path("/{productId}")
-    public Response getProduct(Long productId){
+    public Response getProduct(@PathParam("productId") Long productId){
         Product productFound = productService.findById(productId).orElseThrow(()->new EntityNotFoundException("Product not found"));
         ProductDto productDto = productMapper.productToProductDto(productFound);
         return Response.ok(productDto).build();

@@ -1,10 +1,7 @@
 package com.storage.controller;
 
-import com.storage.dto.ProductDto;
-import com.storage.dto.ProductMapper;
 import com.storage.dto.ThirdPartyDto;
 import com.storage.dto.ThirdPartyMapper;
-import com.storage.service.ProductService;
 import com.storage.service.ThirdPartyService;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -29,7 +26,7 @@ public class ThirdPartyController {
     ThirdPartyMapper thirdPartyMapper;
 
     @GET
-    public Response getAllProducts(){
+    public Response getAllProducts() {
         List<ThirdPartyDto> thirdPartyDtoList = thirdPartyMapper.thirdPartyListToThirdPartyDtoList(thirdPartyService.getAllThirdParty());
         return Response.ok(thirdPartyDtoList).build();
     }

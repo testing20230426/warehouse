@@ -2,9 +2,6 @@ package com.storage.dto;
 
 import com.storage.enums.OperationTypeEnum;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.ValueMapping;
-import org.mapstruct.ValueMappings;
 import org.mapstruct.factory.Mappers;
 
 import java.util.Arrays;

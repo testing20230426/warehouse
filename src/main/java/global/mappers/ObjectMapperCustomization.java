@@ -2,7 +2,6 @@ package global.mappers;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationConfig;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import io.quarkus.jackson.ObjectMapperCustomizer;
 

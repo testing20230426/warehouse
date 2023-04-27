@@ -3,7 +3,6 @@ package com.storage.dto;
 import com.storage.entity.ThirdParty;
 import org.mapstruct.*;
 
-import javax.inject.Inject;
 import java.util.List;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE, componentModel = "cdi")
