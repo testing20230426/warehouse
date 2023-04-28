@@ -4,6 +4,10 @@ This project uses Quarkus somewhow similiar to Spring - it uses Spring Data Jpa 
 
 Mapping to exposed DTO is handled by Mapstruct.
 
+To test RBAC make sure that first generate the jwt needed token from localhost:8080/warehouse/secured/generateToken
+
+Use ThirdPartyResource for a demo of RBAC
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
